@@ -33,3 +33,6 @@ i ran linux exploit suggester. dirty cow didnt work.
 
 rds worked
 <img width="587" height="416" alt="image" src="https://github.com/user-attachments/assets/dff70b15-5097-45f0-93a2-c7055d425a83" />
+
+pwnkit also worked
+<img width="455" height="173" alt="image" src="https://github.com/user-attachments/assets/4f38cf47-08ba-43cf-a30b-9b303d4bc1f2" />
